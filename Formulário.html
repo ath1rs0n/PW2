@@ -5,30 +5,36 @@
 
     <meta charset="utf-8" />
     <title>Formulário</title>
-    
+    <script src="validacao.js"></script>
 </head>
 
 <body>
     <fieldset style="width: 30%;">
-
-        <form id="myForm">
+        <legend>Formulário</legend>
+        <form id="myForm" onsubmit="return verificarTudo()" >
 
             <div>
                 <label for="nome">Nome:</label>
-                <input type="text" id="nome" />
+                <input onkeyup="validarNome()" type="text" id="nome" />
+                <label id="nomeErro"></label>
             </div>
             <div>
                 <label for="email">E-mail:</label>
-                <input type="email" id="email" />
+                <input onkeyup="validarEmail()" type="email" id="email" />
+                <label id="erroEmail"></label>
             </div>
             <div>
                 <label for="senha">Senha:</label>
-                <input type="password" id="pass" name="senha" minlength="8" required>
+                <input onkeyup="validarSenha()" type="password" id="password" name="senha" minlength="8">
+                <label id="passwordErro">
+                
+                </label>
             </div>
 
             <div>
                 <label for="repetir">Repetir Senha:</label>
-                <input type="password" id="pass" name="senha2" minlength="8" required>
+                <input onkeyup="validarRepeticaoSenha()" type="password" id="repPassword" name="senha2" minlength="8">
+            <label id="repPasswordErro"></label>
             </div>
 
             Módulo:
@@ -56,7 +62,7 @@
                     </td>
                     <td>
                         <div class="button">
-                            <button type="submit">Limpar</button>
+                            <INPUT type="reset"  name="b2" value="Limpar">
                         </div>
                     </td>
                 </tr>
@@ -64,11 +70,6 @@
 
         </form>
 
-        <script>
-        function myFunction() {
-            document.getElementById("myForm").reset();
-        }
-        </script>
 
     </fieldset>
 </body>
