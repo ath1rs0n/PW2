@@ -1,0 +1,57 @@
+<meta charset="UTF-8">
+
+<input type="text" id="numero" />
+<input type="submit" id="adivinhar" value="Compare com o meu segredo!"/>
+
+<script>
+
+    //alert("Podemos fazer mais com JavaScript!"); // se comunicar com o usuario
+
+    //document.write("Minha idade é: "); // write: printf do js
+    //document.write(19);       // document: representa o documento(arquivo) em que o script está dentro(faz parte)!
+
+    //var ano = 2012; // declaração de variavel, e atribuição da variavel, que foi usada abaixo!
+    //document.write("Eu nasci em: " + (ano - 12) + "<br>"); //<br> contra barra n de jv(quebra de linha)!
+
+    //function mostra(frase){        //mostra = funcão, frase = parametro
+    //document.write(frase + "<br>"); // aparecer na tela!
+    //};
+    //var ano = 2012;
+    //mostra("Eu nasci em: " + (ano - 12)); //chamou a função, e dentro escreveu o parametro.
+    //console.log("esta mensagem aparece apenas no log"); //console.log não vai aparecer na tela, somente no console.
+
+    //var nome = prompt("Bom Dia!, Qual é o seu nome? "); // prompt = é scanf de js, é tipo o alert
+    //document.write("Bem vindo, " + nome + "<br>");
+    //var idade = prompt(nome + " quantos anos você tem? ");
+    //document.write(nome + " tem " + idade + " anos." + "<br>");
+
+    // function mostra(frase) {        //mostra = funcão, frase = parametro
+    //     document.write(frase + "<br>"); // aparecer na tela!
+    // };
+    //   var vitorias = prompt("Quantos jogos o CDC futebol Clube venceu?");
+    //   var empates = prompt("Quantos jogos o CDC futebol Clube Empatou?");
+    //  var pontos = (parseInt(vitorias) * 3) + parseInt(empates); //é uma função pronta que ja tem no jv, recebe parametro normalmente uma string e retorna como inteiro
+    //  if (pontos > 45) {
+    //      mostra("o CDC futebol clube não será rebaixado!");
+    //  } else {
+    //   mostra("Lamento informar. Mas acho que o CDC futebol clube será rebaixado!");
+    // }
+
+    // var anoDeCopa = 1930;
+    // while (anoDeCopa <= 2022) {         //estrutura de repetição
+    //     alert(anoDeCopa + " tem copa!");
+    //     anoDeCopa = anoDeCopa + 4;
+    // }
+
+    // var numero = 7;
+    // for (var multiplicador = 1; multiplicador <= 10; multiplicador++) {
+    //     mostra(multiplicador * numero);
+    // }
+
+var caixaDoNumero = document.getElementById("numero");
+var botaoAdivinhar = document.getElementById("adivinhar");
+var botaoClicado = function () {
+    alert(caixaDoNumero.values);
+};
+botaoAdivinhar.onclick = botaoClicado
+</script>
